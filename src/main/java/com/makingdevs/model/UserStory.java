@@ -13,6 +13,9 @@ public class UserStory {
    
   private Project project;
   private List<Task> tasks;
+  
+  public UserStory(){ super(); }
+  
   public Long getId() {
     return id;
   }
