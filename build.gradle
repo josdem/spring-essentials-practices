@@ -7,7 +7,10 @@ repositories {
   mavenCentral()
 }
 
+def springVersion = '4.0.1.RELEASE'
+
 dependencies {
   testCompile 'junit:junit:4.11'
   testCompile 'org.mockito:mockito-all:1.9.5'
+  compile "org.springframework:spring-context:$springVersion"
 }
