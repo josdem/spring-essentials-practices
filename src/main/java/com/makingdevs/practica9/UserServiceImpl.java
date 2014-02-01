@@ -5,8 +5,6 @@ import org.springframework.stereotype.Repository;
 import com.makingdevs.model.User;
 import com.makingdevs.services.UserService;
 
-// We use @Repository only for demo purposes
-@Repository
 public class UserServiceImpl implements UserService {
 
   @Override

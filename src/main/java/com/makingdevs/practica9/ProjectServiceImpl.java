@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import com.makingdevs.model.Project;
 import com.makingdevs.services.ProjectService;
 
-@Component
 public class ProjectServiceImpl implements ProjectService {
 
   @Override
