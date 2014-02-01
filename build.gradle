@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'groovy'
 
 sourceCompatibility = 1.6
 version = '1.0'
@@ -14,4 +15,5 @@ dependencies {
   testCompile 'org.mockito:mockito-all:1.9.5'
   testCompile "org.springframework:spring-test:$springVersion"
   compile "org.springframework:spring-context:$springVersion"
+  compile 'org.codehaus.groovy:groovy-all:2.1.6'
 }

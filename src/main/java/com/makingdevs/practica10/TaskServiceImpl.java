@@ -9,6 +9,8 @@ import com.makingdevs.services.UserService;
 public class TaskServiceImpl implements TaskService {
   
   private UserService userService;
+  
+  public TaskServiceImpl(){ super(); }
 
   public TaskServiceImpl(UserService userService){
     this.userService = userService;
