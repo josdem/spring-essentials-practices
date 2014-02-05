@@ -9,6 +9,7 @@ import com.makingdevs.model.UserStory;
 import com.makingdevs.services.ProjectService;
 import com.makingdevs.services.UserStoryService;
 
+@Component
 public class UserStoryServiceImpl implements UserStoryService {
   
   @Autowired

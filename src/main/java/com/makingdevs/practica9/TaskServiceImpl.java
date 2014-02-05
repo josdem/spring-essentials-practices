@@ -8,6 +8,7 @@ import com.makingdevs.model.TaskStatus;
 import com.makingdevs.services.TaskService;
 import com.makingdevs.services.UserService;
 
+@Service
 public class TaskServiceImpl implements TaskService {
   
   @Autowired

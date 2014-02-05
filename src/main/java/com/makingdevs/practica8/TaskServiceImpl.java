@@ -11,6 +11,9 @@ public class TaskServiceImpl implements TaskService {
   
   private UserService userService;
 
+  // @Inject
+  // @Resource
+  @Autowired
   public void setUserService(UserService userService) {
     this.userService = userService;
   }

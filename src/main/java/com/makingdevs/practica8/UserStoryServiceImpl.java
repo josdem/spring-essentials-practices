@@ -14,6 +14,9 @@ public class UserStoryServiceImpl implements UserStoryService {
   
   public UserStoryServiceImpl(){}
   
+  // @Inject
+  // @Resource
+  @Autowired
   public UserStoryServiceImpl(ProjectService projectService){
     this.projectService =  projectService;
   }

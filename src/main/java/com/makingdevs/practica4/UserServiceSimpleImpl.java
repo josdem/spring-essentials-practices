@@ -1,13 +1,9 @@
-package com.makingdevs.practica9;
-
-import org.springframework.stereotype.Repository;
+package com.makingdevs.practica4;
 
 import com.makingdevs.model.User;
 import com.makingdevs.services.UserService;
 
-// We use @Repository only for demo purposes
-@Repository
-public class UserServiceImpl implements UserService {
+public class UserServiceSimpleImpl implements UserService {
 
   @Override
   public User findUserByUsername(String username) {

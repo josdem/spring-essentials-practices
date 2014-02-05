@@ -17,7 +17,3 @@ dependencies {
   compile "org.springframework:spring-context:$springVersion"
   compile 'org.codehaus.groovy:groovy-all:2.1.6'
 }
-
-task wrapper(type: Wrapper) {
-  gradleVersion = '1.10'
-}
