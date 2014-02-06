@@ -8,3 +8,5 @@
 spring-essentials-lab.iml
 .springBeans
 out/
+classes/
+*.iml
