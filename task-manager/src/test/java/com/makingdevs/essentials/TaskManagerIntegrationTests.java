@@ -1,15 +1,21 @@
 package com.makingdevs.essentials;
 
-import static org.junit.Assert.*;
-import org.junit.Test;
-import org.junit.Before;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
 
 public class TaskManagerIntegrationTests {
 
   private TaskManager taskManager;
+  
+  private File file = new File("src/test/resources/tasks.txt");
 
   @Before
   public void setup(){
@@ -47,9 +53,9 @@ public class TaskManagerIntegrationTests {
   }
 
   @Test
-  public void addATasksFromAFile(){
-    // TODO: Implements the feature
-    assertTrue(false);
+  public void addATasksFromAFile() throws FileNotFoundException{
+    taskManager.addTask(file);
+    assertTrue(taskManager.howManyTasks() == 1);
   }
 
   @Test

@@ -2,10 +2,16 @@ package com.makingdevs.essentials;
 
 public class Task {
 
-  public Task(String string) {
+  private String description;
+  
+  public Task() {}
+
+  public Task(String description) {
+    this.description = description;
   }
 
-  public Task() {
+  public String getDescripton() {
+    return description;
   }
 
 }
