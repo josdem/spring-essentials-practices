@@ -20,6 +20,7 @@ dependencies {
   compile "org.aspectj:aspectjrt:${aspectjVersion}"
   compile "org.aspectj:aspectjweaver:${aspectjVersion}"
   compile 'org.codehaus.groovy:groovy-all:2.1.6'
+  compile 'org.apache.commons:commons-lang3:3.0'  
   compile 'log4j:log4j:1.2.17'
 }
 
