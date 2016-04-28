@@ -1,14 +1,13 @@
 package com.makingdevs.practica4;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 
 import com.makingdevs.services.UserService;
 
@@ -16,9 +15,10 @@ public class UseSpringAsLibraryTests {
 
   @Test
   public void useSpringWithBeanFactory() {
-    Resource resource = new ClassPathResource("com/makingdevs/practica4/ApplicationContext.xml");
-    BeanFactory beanFactory = new XmlBeanFactory(resource);
-    UserService userService = (UserService)beanFactory.getBean("userService");
+    DefaultListableBeanFactory xbf = new DefaultListableBeanFactory();
+    XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(xbf);
+    reader.loadBeanDefinitions(new ClassPathResource("/com/makingdevs/practica4/ApplicationContext.xml", getClass()));
+    UserService userService = (UserService)xbf.getBean("userService");
     assertNotNull(userService);
   }
   
